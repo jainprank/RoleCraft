@@ -1,4 +1,4 @@
-# Your JobMagnet Portfolio
+# Your RoleCraft Portfolio
 
 This is your AI-tailored portfolio — generated specifically for the role you applied to. It's a Next.js 15 app that deploys to Vercel in under 2 minutes.
 
@@ -9,7 +9,7 @@ This is your AI-tailored portfolio — generated specifically for the role you a
 1. **Unzip** the downloaded file and open your terminal in the folder.
 2. **Enter the folder:**
    ```sh
-   cd jobmagnet-portfolio
+   cd rolecraft-portfolio
    ```
 3. **Push to GitHub:**
    ```sh
@@ -37,9 +37,9 @@ To change colors or fonts, edit `tailwind.config.ts` (colors) and `app/layout.ts
 
 ---
 
-## Remove JobMagnet attribution
+## Remove RoleCraft attribution
 
-The small "i" badge in the bottom-right corner is the only JobMagnet branding. To remove it:
+The small "i" badge in the bottom-right corner is the only RoleCraft branding. To remove it:
 
 1. Delete `components/InfoBadge.tsx`
 2. Open `components/PortfolioRender.tsx` and remove the `<InfoBadge />` import and JSX line.

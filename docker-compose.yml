@@ -1,19 +1,19 @@
 services:
-  jobmagnet-codex:
+  rolecraft-codex:
     build: .
-    image: jobmagnet-codex:latest
-    container_name: jobmagnet-codex
+    image: rolecraft-codex:latest
+    container_name: rolecraft-codex
     restart: unless-stopped
     ports:
       - "127.0.0.1:8443:8443"
     env_file:
-      - /root/.jobmagnet/env
+      - /root/.rolecraft/env
     volumes:
       # Codex needs to write log/, memories/, tmp/ alongside auth.json — must be :rw.
       # auth.json is not at risk: container runs only our code which never touches it.
       - /root/.codex:/root/.codex:rw
-      - /root/.jobmagnet/secret:/root/.jobmagnet/secret:ro
-      - /var/jobmagnet/jobs:/var/jobmagnet/jobs:rw
+      - /root/.rolecraft/secret:/root/.rolecraft/secret:ro
+      - /var/rolecraft/jobs:/var/rolecraft/jobs:rw
     healthcheck:
       test: ["CMD", "node", "-e", "fetch('http://localhost:8443/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
       interval: 30s

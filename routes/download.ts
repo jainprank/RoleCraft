@@ -5,7 +5,7 @@ import { join } from "node:path";
 import { z } from "zod";
 import { verifyDownloadToken } from "../lib/download-link.js";
 
-const JOBS_ROOT = process.env.JOBMAGNET_JOBS_DIR ?? "/var/jobmagnet/jobs";
+const JOBS_ROOT = process.env.ROLECRAFT_JOBS_DIR ?? "/var/rolecraft/jobs";
 
 const ParamsSchema = z.object({
   jobId: z.string().regex(/^[a-zA-Z0-9_-]+$/, "invalid job id"),
@@ -50,7 +50,7 @@ export async function downloadHandler(req: FastifyRequest, reply: FastifyReply) 
       .header("Content-Type", "application/zip")
       .header(
         "Content-Disposition",
-        `attachment; filename="jobmagnet-portfolio-${jobId}.zip"`,
+        `attachment; filename="rolecraft-portfolio-${jobId}.zip"`,
       )
       .header("Content-Length", String(st.size))
       .header("Cache-Control", "private, no-store");

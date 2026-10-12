@@ -1,7 +1,8 @@
 {
-  "name": "jobmagnet-codex",
+  "name": "rolecraft-codex",
   "version": "0.1.0",
-  "description": "JobMagnet VPS bridge — Codex SDK agent runtime on Hostinger",
+  "description": "RoleCraft VPS bridge — Codex SDK agent runtime on Hostinger",
+  "author": "Priyanka Jain",
   "type": "module",
   "engines": {
     "node": ">=22"

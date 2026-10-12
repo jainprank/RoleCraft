@@ -8,9 +8,9 @@
  * the template buildable.
  *
  * SYNC: the byte-identical RENDER twins are this file
- * (`jobmagnet-codex/template/lib/font-map.ts`) and `jobmagnet-app/lib/font-map.ts`
+ * (`rolecraft-codex/template/lib/font-map.ts`) and `rolecraft-app/lib/font-map.ts`
  * — both export `googleFontLinks` (the app preview and the downloaded zip load
- * brand fonts identically). Keep those two in sync. `jobmagnet-codex/lib/font-map.ts`
+ * brand fonts identically). Keep those two in sync. `rolecraft-codex/lib/font-map.ts`
  * is the PIPELINE copy used by CodeAgent (`resolveFont` only — no `googleFontLinks`);
  * it shares the allowlist but intentionally omits the render helper.
  */

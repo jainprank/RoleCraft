@@ -4,15 +4,15 @@
 
 Please report security issues **privately** — do not open a public issue.
 
-- **Email:** your-email@example.com — subject `SECURITY — jobmagnet-codex`
+- **Email:** your-email@example.com — subject `SECURITY — rolecraft-codex`
 
 Include the impact, steps to reproduce (or a proof of concept), and any suggested fix. This is a solo-maintained project; reports are acknowledged on a best-effort basis, with a remediation timeline shared after triage.
 
 ## Scope
 
-`jobmagnet-codex` is the Codex-agent runtime for JobMagnet. In scope: the Fastify service (`server.ts`, `routes/`, `lib/`), agent orchestration and sandboxing, and the downloadable portfolio **template** under `template/`.
+`rolecraft-codex` is the Codex-agent runtime for RoleCraft. In scope: the Fastify service (`server.ts`, `routes/`, `lib/`), agent orchestration and sandboxing, and the downloadable portfolio **template** under `template/`.
 
-Out of scope: third-party services (OpenAI, Supabase, Brandfetch, Cloudflare) and the separate `jobmagnet-app` repository (it carries its own policy).
+Out of scope: third-party services (OpenAI, Supabase, Brandfetch, Cloudflare) and the separate `rolecraft-app` repository (it carries its own policy).
 
 ## Practices
 

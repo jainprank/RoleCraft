@@ -21,7 +21,7 @@ interface CtaTarget {
   external: boolean;
 }
 
-// Twin of jobmagnet-app/components/portfolio/Hero.tsx resolveCtas: emit real
+// Twin of rolecraft-app/components/portfolio/Hero.tsx resolveCtas: emit real
 // LinkedIn / email targets from the candidate's contact data, with a blank
 // mailto fallback only when nothing resolves.
 function resolveCtas(

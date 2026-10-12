@@ -10,7 +10,7 @@
  * Pure, dependency-free, and defensive: a malformed brand value must never crash
  * a rendered portfolio, so the high-level helpers fall back to a safe dark ink.
  *
- * (Kept in sync with jobmagnet-app/lib/brand-contrast.ts — the live preview and
+ * (Kept in sync with rolecraft-app/lib/brand-contrast.ts — the live preview and
  * the downloaded site must render identically.)
  */
 

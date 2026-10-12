@@ -12,7 +12,7 @@ import type { FastifyReply, FastifyRequest } from "fastify";
 export async function healthHandler(_req: FastifyRequest, reply: FastifyReply) {
   return reply.send({
     ok: true,
-    service: "jobmagnet-codex",
+    service: "rolecraft-codex",
     timestamp: new Date().toISOString(),
   });
 }

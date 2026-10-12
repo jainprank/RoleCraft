@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync } from "node:fs";
 
 export function ensureWorkspace(jobId: string): string {
-  const root = process.env.WORKSPACE_ROOT ?? "/var/jobmagnet/jobs";
+  const root = process.env.WORKSPACE_ROOT ?? "/var/rolecraft/jobs";
   if (!/^[a-zA-Z0-9_-]+$/.test(jobId)) {
     throw new Error(`invalid job_id: ${jobId}`);
   }

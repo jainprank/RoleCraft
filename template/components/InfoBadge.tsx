@@ -28,11 +28,11 @@ export function InfoBadge() {
         >
           <p className="font-semibold text-slate-900">About this site</p>
           <p className="mt-1 leading-relaxed text-slate-600">
-            Built with JobMagnet — AI-tailored portfolio for this role. Experiences and pitch
+            Built with RoleCraft — AI-tailored portfolio for this role. Experiences and pitch
             written by the candidate; AI helped tailor the framing.
           </p>
           <a
-            href="https://jobmagnet-app.vercel.app"
+            href="https://rolecraft-app.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 block text-indigo-600 underline"

@@ -1,8 +1,8 @@
 <div align="center">
 
-# jobmagnet-codex
+# rolecraft-codex
 
-**The Codex SDK "engine room" for JobMagnet: five specialized OpenAI Codex agents on a VPS that turn a profile + a job link into a deployable, on-brand portfolio site in ~96 seconds.**
+**The Codex SDK "engine room" for RoleCraft: five specialized OpenAI Codex agents on a VPS that turn a profile + a job link into a deployable, on-brand portfolio site in ~96 seconds.**
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![Codex SDK](https://img.shields.io/badge/@openai%2Fcodex--sdk-0.133-black?style=for-the-badge)](https://www.npmjs.com/package/@openai/codex-sdk)
 
@@ -12,7 +12,7 @@
 
 ## Why this is a separate service
 
-This is the companion runtime to **jobmagnet-app** (the Next.js UI + API on Vercel). It's separate **by force, not preference**, because the Codex CLI is a **185 MB binary** (larger than Vercel's **50 MB** function limit), and the Code agent needs a persistent shell, a writable workspace, and ~96s of runtime. So the agent runtime can't live in a serverless function. It runs here: a **Fastify** server in a Docker container on a **Hostinger VPS**, reachable from Vercel over a **Cloudflare Tunnel** at `https://your-tunnel.example.com`.
+This is the companion runtime to **rolecraft-app** (the Next.js UI + API on Vercel). It's separate **by force, not preference**, because the Codex CLI is a **185 MB binary** (larger than Vercel's **50 MB** function limit), and the Code agent needs a persistent shell, a writable workspace, and ~96s of runtime. So the agent runtime can't live in a serverless function. It runs here: a **Fastify** server in a Docker container on a **Hostinger VPS**, reachable from Vercel over a **Cloudflare Tunnel** at `https://your-tunnel.example.com`.
 
 ## The 5 Codex agents
 
@@ -41,7 +41,7 @@ Bearer tokens are compared in constant time (`timingSafeEqual`). Per-route rate 
 
 ```mermaid
 flowchart LR
-    A["jobmagnet-app<br/>(Vercel)"] -->|"POST /orchestrate<br/>bearer · Cloudflare Tunnel"| F["Fastify server"]
+    A["rolecraft-app<br/>(Vercel)"] -->|"POST /orchestrate<br/>bearer · Cloudflare Tunnel"| F["Fastify server"]
     F --> O["Orchestrator"]
     O --> R["Research"]
     O --> B["Brand"]
@@ -56,7 +56,7 @@ flowchart LR
     B --> S
     N --> S
     P --> S
-    C -->|"archiver"| Z["per-job zip<br/>/var/jobmagnet/jobs"]
+    C -->|"archiver"| Z["per-job zip<br/>/var/rolecraft/jobs"]
     F -->|"GET /download (HMAC)"| Z
 ```
 
@@ -76,7 +76,7 @@ flowchart LR
 
 ```bash
 ssh root@<your-vps-host>
-cd /opt/jobmagnet-codex
+cd /opt/rolecraft-codex
 git pull
 docker compose build && docker compose up -d
 docker compose logs -f --tail=50
@@ -84,8 +84,8 @@ docker compose logs -f --tail=50
 
 **Bind mounts:**
 - `/root/.codex` (ro): ChatGPT Plus OAuth tokens, shared with the host Codex CLI.
-- `/root/.jobmagnet/secret` (ro): the bearer secret shared with the Vercel app.
-- `/var/jobmagnet/jobs` (rw): per-job workspaces + generated zips.
+- `/root/.rolecraft/secret` (ro): the bearer secret shared with the Vercel app.
+- `/var/rolecraft/jobs` (rw): per-job workspaces + generated zips.
 
 ## License
 
@@ -95,6 +95,6 @@ docker compose logs -f --tail=50
 
 <div align="center">
 
-The product this powers: **jobmagnet-app** · built by Priyanka Jain
+The product this powers: **rolecraft-app** · built by Priyanka Jain
 
 </div>

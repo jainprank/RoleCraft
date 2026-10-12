@@ -11,9 +11,9 @@ const PORT = Number(process.env.VPS_PORT ?? 8443);
 
 const SHARED_SECRET = (() => {
   try {
-    return readFileSync("/root/.jobmagnet/secret", "utf8").trim();
+    return readFileSync("/root/.rolecraft/secret", "utf8").trim();
   } catch (err) {
-    console.error("Failed to read /root/.jobmagnet/secret:", err);
+    console.error("Failed to read /root/.rolecraft/secret:", err);
     process.exit(1);
   }
 })();
@@ -74,7 +74,7 @@ const start = async () => {
     // the host's 127.0.0.1 port is exposed externally — Cloudflare Tunnel is
     // the sole public entry. See docker-compose.yml.
     await app.listen({ port: PORT, host: "0.0.0.0" });
-    app.log.info(`jobmagnet-codex listening on :${PORT}`);
+    app.log.info(`rolecraft-codex listening on :${PORT}`);
   } catch (err) {
     app.log.error(err);
     process.exit(1);

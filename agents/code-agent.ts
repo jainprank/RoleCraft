@@ -9,8 +9,8 @@ import { zipPortfolio } from "../lib/zip-portfolio.js";
 import { signDownloadUrl } from "../lib/download-link.js";
 
 const TEMPLATE_DIR =
-  process.env.JOBMAGNET_TEMPLATE_DIR ?? "/opt/jobmagnet-codex/template";
-const JOBS_ROOT = process.env.JOBMAGNET_JOBS_DIR ?? "/var/jobmagnet/jobs";
+  process.env.ROLECRAFT_TEMPLATE_DIR ?? "/opt/rolecraft-codex/template";
+const JOBS_ROOT = process.env.ROLECRAFT_JOBS_DIR ?? "/var/rolecraft/jobs";
 const VPS_BASE_URL = process.env.PUBLIC_VPS_BASE_URL ?? "";
 
 export interface CodeInputs {
