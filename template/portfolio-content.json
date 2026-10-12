@@ -1,0 +1,75 @@
+{
+  "candidate_name": "Your Name",
+  "headline": "Your one-line headline: role, strengths, and what you are looking for",
+  "about": "A short paragraph about you: what you build, how you work, and the kind of role you want next.",
+  "why_im_a_fit": [
+    {
+      "metric": "Key strength 1",
+      "bullet": "A concrete example that maps to the job description."
+    },
+    {
+      "metric": "Key strength 2",
+      "bullet": "A second example with a measurable outcome."
+    },
+    {
+      "metric": "Key strength 3",
+      "bullet": "A third example that shows scope or leadership."
+    }
+  ],
+  "work": [
+    {
+      "company": "Company Name",
+      "title": "Your Title",
+      "dates": "Start – End",
+      "bullets": [
+        "Achievement with a measurable result.",
+        "Another achievement or responsibility.",
+        "A third highlight."
+      ]
+    }
+  ],
+  "pitch_section": {
+    "stance": "builder",
+    "title": "What I would ship at Example Company",
+    "problem": "The user problem you observed, with specifics from your own research.",
+    "hypothesis": "The change you believe will move the metric, and why.",
+    "proposed_solution": "The concrete change you would ship and how you would validate it.",
+    "metrics_to_track": [
+      "Primary metric",
+      "Secondary metric",
+      "Guardrail metric"
+    ],
+    "tradeoffs": [
+      "A real tradeoff of the proposal"
+    ],
+    "guardrails": [
+      "A risk the change must not cause",
+      "A rollout safeguard"
+    ],
+    "evidence": [
+      {
+        "type": "screenshot",
+        "url": "/evidence/current-behavior.png",
+        "caption": "Current behavior"
+      },
+      {
+        "type": "wireframe-svg",
+        "url": "/evidence/proposed-flow.svg",
+        "caption": "Proposed flow"
+      }
+    ]
+  },
+  "brand_style": {
+    "primary": "#635BFF",
+    "secondary": "#9F94FF",
+    "background": "#FFFFFF",
+    "headline_font": "Inter",
+    "body_font": "Inter",
+    "mood": "minimal",
+    "source": "brandfetch"
+  },
+  "target_company": {
+    "name": "Example Company",
+    "domain": "example.com"
+  }
+}
