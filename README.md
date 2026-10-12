@@ -3,7 +3,6 @@
 # rolecraft-codex
 
 **The Codex SDK "engine room" for RoleCraft: five specialized OpenAI Codex agents on a VPS that turn a profile + a job link into a deployable, on-brand portfolio site in ~96 seconds.**
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![Codex SDK](https://img.shields.io/badge/@openai%2Fcodex--sdk-0.133-black?style=for-the-badge)](https://www.npmjs.com/package/@openai/codex-sdk)
 
 </div>
@@ -86,10 +85,6 @@ docker compose logs -f --tail=50
 - `/root/.codex` (ro): ChatGPT Plus OAuth tokens, shared with the host Codex CLI.
 - `/root/.rolecraft/secret` (ro): the bearer secret shared with the Vercel app.
 - `/var/rolecraft/jobs` (rw): per-job workspaces + generated zips.
-
-## License
-
-[MIT](LICENSE). © 2026 Priyanka Jain
 
 ---
 
